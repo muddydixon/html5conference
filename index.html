@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf8" />
+    <title>HTML5 Conference 2012</title>
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+      @import url(css/style.css);
+      @import url(css/chart.css);
+      @import url(css/main.css);
+    </style>
+  </head>
+  <body class="overview">
+    <section>
+      <h1 class="double">d3.jsで拓く<br>これからの<br>データ表現</h1>
+      <h2 class="grey"><a href="https://twitter.com/muddydixon">@muddydixon</a></h2>
+    </section>
+
+    <section>
+      <h1 class="double"><s>d3.jsで拓く<br>これからの<br>データ表現</s></h1>
+      <h2 class="grey"><a href="https://twitter.com/muddydixon">@muddydixon</a></h2>
+    </section>
+
+    <section>
+      <h1>厨二っぽい</h1>
+    </section>
+
+    <section>
+      <h1 class="blue">introduction of <span class="pink">"layout"</span> as <span class="red">"Core"</span> of D3.js</h1>
+      <h2 class="grey"><a href="https://twitter.com/muddydixon">@muddydixon</a></h2>
+    </section>
+
+    <section>
+      <h1>Do you know <span class="blue">D3.js</span> ?</h1>
+    </section>
+
+    <section>
+      <h1 class="double">The <span class="blue">Coolest</span> JavaScript library for Data representation</h1>
+    </section>
+
+    <section style="text-align: center;">
+      <img src="img/coolest.jpg" />
+    </section>
+
+    <section>
+      <h1 class="red">Caution</h1>
+    </section>
+
+    <section>
+      <h1 class="double">The fan of your computer tunes <br><span class="orange">very actively</span> <span class="pink">:)</span></h1>
+    </section>
+
+    <section>
+      <h1><span class="purple">Data</span>-Driven <span class="green">Documents</span><br/> ↦ <span class="blue">D3</span></h1>
+      <h2>about D3.js</h2>
+    </section>
+
+    <section>
+      <h1><span class="green">Web Standard</span></h1>
+      <h2>
+        <ul>
+           <li><span class="green">DOM</span> Element</li>
+           <li><span class="green">HTML5</span></li>
+           <li><span class="green">SVG</span></li>
+           <li><span class="green">CSS3</span></li>
+           <li><span class="green">JavaScript</span></li>
+        </ul>
+      </h2>
+    </section>
+
+    <section>
+      <h1 class="double">Supporting so called <span class="red">"Modern" browsers</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double">Supporting so called <span class="red">"Modern" browsers</span> except <span class="blue">IE8 and before</span></h1>
+    </section>
+
+    <section>
+      <h1 class="orange">Features</h1>
+    </section>
+
+    <section>
+      <h1 class="double">Small Start with only <span class="pink">browser</span> and <span class="pink">editor</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double">Interaction Available with <span class="pink">mouse, keyboard and touch</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double">nested Data Friendly <br>we can use <span class="pink">JSON</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double">Realtime Updating <br>via <span class="pink">Ajax, JSONP</span> and <span class="pink">WebSocket</span></h1>
+    </section>
+
+    <section>
+      <h1>Yes! <span class="blue">D3</span> is implementd in <span class="green">JavaScript</span> we love!</h1>
+    </section>
+
+    <section>
+      <h1 class="double">Relative documents</h1>
+      <h2>
+        <a href="http://www.slideshare.net/kadoppe/d3js">
+          <img width="400" src="img/d3_data_visualization.jpg" /><br />
+          <span style="font-size: 20pt;">http://www.slideshare.net/kadoppe/d3js</span>
+        </a>
+        <a href="http://bost.ocks.org/mike/d3/workshop/">
+          <img width="400" src="img/d3workshop.jpg" /><br />
+          <span style="font-size: 20pt;">http://bost.ocks.org/mike/d3/workshop/</span>
+        </a>
+      </h2>
+    </section>
+
+    <section>
+      <h1 class="orange">Examples</h1>
+    </section>
+    
+    <section>
+      <h1>One document in <span class="green">JSON</span></h1>
+    </section>
+    <section>
+      <pre style="font-size: 0.5pt !important;"><code class="javascript">{
+ "name": "flare",
+ "children": [
+  {
+   "name": "analytics",
+   "children": [
+    {
+     "name": "cluster",
+     "children": [
+      {"name": "AgglomerativeCluster", "size": 3938},
+      {"name": "CommunityStructure", "size": 3812},
+      {"name": "HierarchicalCluster", "size": 6714},
+      {"name": "MergeEdge", "size": 743}
+     ]
+    },
+    {
+     "name": "graph",
+     "children": [
+      {"name": "BetweennessCentrality", "size": 3534},
+      {"name": "LinkDistance", "size": 5731},
+      {"name": "MaxFlowMinCut", "size": 7840},
+      {"name": "ShortestPaths", "size": 5914},
+      {"name": "SpanningTree", "size": 3416}
+     ]
+    },
+    {
+     "name": "optimization",
+     "children": [
+      {"name": "AspectRatioBanker", "size": 7074}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "animate",
+   "children": [
+    {"name": "Easing", "size": 17010},
+    {"name": "FunctionSequence", "size": 5842},
+    {
+     "name": "interpolate",
+     "children": [
+      {"name": "ArrayInterpolator", "size": 1983},
+      {"name": "ColorInterpolator", "size": 2047},
+      {"name": "DateInterpolator", "size": 1375},
+      {"name": "Interpolator", "size": 8746},
+      {"name": "MatrixInterpolator", "size": 2202},
+      {"name": "NumberInterpolator", "size": 1382},
+      {"name": "ObjectInterpolator", "size": 1629},
+      {"name": "PointInterpolator", "size": 1675},
+      {"name": "RectangleInterpolator", "size": 2042}
+     ]
+    },
+    {"name": "ISchedulable", "size": 1041},
+    {"name": "Parallel", "size": 5176},
+    {"name": "Pause", "size": 449},
+    {"name": "Scheduler", "size": 5593},
+    {"name": "Sequence", "size": 5534},
+    {"name": "Transition", "size": 9201},
+    {"name": "Transitioner", "size": 19975},
+    {"name": "TransitionEvent", "size": 1116},
+    {"name": "Tween", "size": 6006}
+</code></pre>
+    </section>
+
+    <section>
+      <h1>is displayed in <span class="purple">Dendrogram</span></h1>
+    </section>
+
+    <section>
+      <div id="cluster"></div>
+    </section>
+
+    <section>
+      <h1>is displayed in <br><span class="purple">Treemap</span></h1>
+    </section>
+
+    <section>
+      <div id="treemap"></div>
+    </section>
+
+    <section>
+      <h1>That's easy because of <span class="pink">Layout</span></h1>
+    </section>
+
+    <section>
+      <h1><span class="double pink">Layout</span> ?</h1>
+    </section>
+
+    <section>
+      <h1>It's <span class="red">Core</span> Class of <span class="blue">D3.js</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double"><span class="pink">Layout</span> transfroms <br><span class="grey">Data Document</span><br> into <span class="purple">DOM information</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double">Some provide <span class="green">Utility Functions</span> like <span class="purple">Animation, Drag</span></h1>
+    </section>
+
+    <section>
+      <h1 class="double"><span class="pink">Layouts</span> are reusable algorithms</h1>
+      <h2><a href="http://bost.ocks.org/mike/d3/workshop/">D3 workshop by Bostocks</a></h2>
+    </section>
+
+    <section>
+      <h2>
+        <ul>
+          <li>Hierarchical (abstract class)</li>
+          <li>Cluster (extends Hierarchical)</li>
+          <li>Tree (extends Hierarchical)</li>
+          <li>Treemap (extends Hierarchical)</li>
+          <li>Pack (extends Hierarchical)</li>
+          <li>Partition (extends Hierarchical)</li>
+          <li>Chord</li>
+          <li>Force</li>
+          <li>Histogram</li>
+          <li>Pie / Donut</li>
+          <li>Stack</li>
+        </ul>
+      </h2>
+    </section>
+    
+    <section>
+      <h1 class="double">Hierarchical:<br>Nested JSON ↦ <br>Nodes / Links Array</h1>
+    </section>
+
+    <section>
+      <h1 class="double">Chord:<br>Conjuction Matrix ↦ <br>Chrods / Groups Objects</h1>
+    </section>
+
+    <section>
+      <h1 class="double">Force:<br>provides Updating, Drag functions</h1>
+    </section>
+
+    <section>
+      <h1 class="double">Each <span class="pink">layout</span> is different.</h1>
+      <h2><a href="http://bost.ocks.org/mike/d3/workshop/">D3 workshop by Bostock</a></h2>
+    </section>
+
+    <section>
+      <h1>Again</h1>
+    </section>
+
+    <section>
+      <h1><span class="pink">Layout</span> is <br><span class="red">Core</span> Class of <span class="blue">D3.js</span></h1>
+    </section>
+
+    <section>
+      <h1>Conclusion</h1>
+    </section>
+
+    <section>
+      <h1 class="double">Who can control <span class="pink">Layout</span> can also control Data representation</h1>
+    </section>
+
+    <section>
+      <h1 class="double">d3.jsで拓く<br>これからの<br>データ表現</h1>
+    </section>
+
+    <section>
+      <h1>I'm hiring <br><span class="orange">:)</span></h1>
+    </section>
+
+    <section>
+      <h1>And one more thing</h1>
+    </section>
+
+    <section>
+      <h1 class="double orange">Engineer Support <br>CROSS 2013 <br>2013/1/18 (Fri.)</h1>
+    </section>
+
+    <script type="text/javascript" src="js/d3.v2.js"></script>
+    <script type="text/javascript" src="js/stack.v0.js"></script>
+    <script type="text/javascript" src="js/highlight.v0.js"></script>
+    <script type="text/javascript" src="js/flare.json"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

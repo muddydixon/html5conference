@@ -1,0 +1,35 @@
+svg {
+    background: white;
+}
+path.link {
+    fill: none;
+    stroke: #CCC;
+    stroke-width: 2px;
+}
+path.hover {
+    stroke: #FC7676;
+    stroke-width: 10px;
+}
+g.node circle {
+    fill: white;
+    stroke: #CCC;
+}
+
+g.node.hover circle {
+    fill: green;
+}
+
+g.node text {
+    font-size: 8pt;
+}
+
+div.cell {
+    position: absolute;
+    border: 1px solid #FFF;
+    line-height: 12px;
+    font-size: 10pt;
+    overflow: hidden;
+}
+div.hover {
+    border: 5px solid #FC7676;
+}
