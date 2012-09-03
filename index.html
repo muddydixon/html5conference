@@ -122,7 +122,7 @@
       <h1>One document in <span class="green">JSON</span></h1>
     </section>
     <section>
-      <pre style="font-size: 0.5pt !important;"><code class="javascript">{
+      <pre style="font-size: 5pt !important;"><code class="javascript">{
  "name": "flare",
  "children": [
   {
@@ -250,7 +250,125 @@
     </section>
 
     <section>
+      <pre style="font-size: 14pt;"><code class="javascript">{
+ "name": "flare",
+ "children": [
+  {
+   "name": "analytics",
+   "children": [
+    {
+     "name": "cluster",
+     "children": [
+      {"name": "AgglomerativeCluster", "size": 3938},
+      {"name": "CommunityStructure", "size": 3812},
+      {"name": "HierarchicalCluster", "size": 6714},
+      {"name": "MergeEdge", "size": 743}
+     ]
+    },
+    {
+     "name": "graph",
+     "children": [
+      {"name": "BetweennessCentrality", "size": 3534},
+      {"name": "LinkDistance", "size": 5731},
+      {"name": "MaxFlowMinCut", "size": 7840},
+      {"name": "ShortestPaths", "size": 5914},
+      {"name": "SpanningTree", "size": 3416}
+     ]
+    },
+    {
+     "name": "optimization",
+     "children": [
+      {"name": "AspectRatioBanker", "size": 7074}
+     ]
+    }
+   ]
+  }
+ ]
+}</code></pre>
+    </section>
+
+    <section>
+      <pre style="font-size: 14pt;"><code class="javascript">[
+ {
+  "children": Array[1],
+  "depth": 0,
+  "name": "flare",
+  "f"x: 0.5769230769230769,
+  "y": 0
+ },
+ {
+  "children": Array[3],
+  "depth": 1,
+  "name": "analytics",
+  "parent": Object,
+  "x": 0.5769230769230769,
+  "y": 0.33333333333333337
+ },
+ {
+  "children": Array[4],
+  "depth": 2,
+  "name": "cluster",
+  "parent": Object,
+  "x": 0.19230769230769232,
+  "y": 0.6666666666666667
+ },
+ {
+  "depth": 3,
+  "name": "AgglomerativeCluster",
+  "parent": Object,
+  "size": 3938,
+  "x": 0.07692307692307693,
+  "y": 1
+ },
+]</code></pre>
+    </section>
+
+    <section>
       <h1 class="double">Chord:<br>Conjuction Matrix ↦ <br>Chrods / Groups Objects</h1>
+    </section>
+
+    <section>
+      <pre style="font-size: 14pt;"><code class="javascript">[
+ [11975,  5871, 8916, 2868],
+ [ 1951, 10048, 2060, 6171],
+ [ 8010, 16145, 8090, 8045],
+ [ 1013,   990,  940, 6907]
+]</code></pre>
+    </section>
+
+    <section>
+      <pre style="font-size: 14pt;"><code class="javascript">[
+ {
+   "source": {
+     "index": 0,      "subindex": 0,   "value": 11975,
+     "startAngle": 0, "endAngle": 0.7524114405347554
+   },
+   "target": {
+     "index": 0,      "subindex": 0,   "value": 11975
+     "startAngle": 0, "endAngle": 0.7524114405347554
+   },
+ },
+ {
+   "source": {
+     "index": 0,      "subindex": 1,   "value": 5871,
+     "startAngle": 0.7524114405347554, "endAngle": 1.1212972499192688
+   },
+   "target": {
+     "index": 1,      "subindex": 0,   "value": 1951,
+     "startAngle": 1.8617078065173112, "endAngle": 1.9842927518603848
+   },
+ },
+ {
+   "source": {
+     "index": 0,      "subindex": 2,   "value": 8916,
+     "startAngle": 1.1212972499192688, "endAngle": 1.6815060519074008
+   },
+   "target": {
+     "index": 2,      "subindex": 0,   "value": 8010,
+     "startAngle": 3.1327961941597415, "endAngle": 3.6360793372648263
+   },
+ },
+      </code></pre>
     </section>
 
     <section>
