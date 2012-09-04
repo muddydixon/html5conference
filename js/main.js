@@ -56,6 +56,64 @@
     node.on('mouseover', function(d){ d3.select(this).attr('class', 'cell hover'); })
       .on('mouseout', function(d){ d3.select(this).attr('class', 'cell'); });
   }());
+
+  (function(){
+    var data = [];
+    var cnt = 10;
+    var width = window.innerWidth * 0.8
+    , height = window.innerHeight * 0.8
+    , cx = width / 2
+    , cy = height / 2
+    ;
+    
+    var svg = d3.select('#smile')
+      .append('svg')
+      .attr('xmlns','http://www.w3.org/2000/svg')
+      .attr('version','1.1')
+    ;
+
+    var duration = 500;
+    setInterval(function(){
+      data.push({size: 0|Math.random() * 500, x: 0|Math.random() * width, y: 0|Math.random() * height, rad: 0|Math.random() * 360});
+      svg.data(data).enter();
+      
+      var smile = svg.append('g').attr('class', 'smile')
+        .attr('r', function(d){console.log(d);})
+        .attr('transform', 'translate('+(width / 2)+','+(height / 2)+ ') rotate('+0+') scale(0.2)');
+      smile.append('circle').attr('class', 'face')
+        .attr('r', function(d){ return d.size;})
+        .attr('fill', 'white')
+        .attr('stroke', 'orange')
+        .attr('stroke-width', function(d){ return d.size * 0.03})
+      ;
+      smile.append('circle').attr('class', 'left-eye')
+        .attr('r', function(d){ return d.size / 10})
+        .attr('transform', function(d){ return 'translate('+(d.size * 0.4)+', '+(-d.size * 0.4)+')';})
+        .attr('fill', 'orange');
+      smile.append('circle').attr('class', 'right-eye')
+        .attr('r', function(d){ return d.size / 10})
+        .attr('transform', function(d){ return 'translate('+(-d.size * 0.4)+', '+(-d.size * 0.4)+')';})
+        .attr('fill', 'orange');
+      smile.append('path').attr('class', 'mouth')
+        .attr('d', function(d){ return 'm-'+(d.size * 0.6)+',0 a'+(d.size * 0.6)+','+(d.size * 0.6)+' 1 1,0 '+(d.size * 1.2)+',0'})
+        .attr('fill', 'none')
+        .attr('stroke', 'orange')
+        .attr('stroke-width', function(d){ return d.size * 0.03});
+      smile.transition()
+        .duration(duration)
+        .ease('linear')
+        .attr('transform', function(d){ return 'translate('+((d.x - cx) / 2 + cx)+','+((d.y - cy) / 2 + cy)+') rotate('+d.rad+')'; })
+      ;    
+      smile.transition()
+        .duration(duration)
+        .ease('linear')
+        .delay(duration)
+        .attr('transform', function(d){ return 'translate('+d.x+','+d.y + ') rotate('+d.rad+') scale(0)'; })
+        .each('end', function(){data.shift();})
+          .remove()
+      ;
+    }, 100);
+  }());
                                     
                                     
   
