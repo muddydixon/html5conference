@@ -1,7 +1,11 @@
 (function(){
-  var width = 1100
-  , height = 550
-  , color = d3.scale.category20c();
+  var width = window.innerWidth * 0.8
+  , height = window.innerHeight * 0.8
+  , cx = width / 2
+  , cy = height / 2
+  , color = d3.scale.category20();
+  ;
+  
 
   (function(){
     var cluster = d3.layout.cluster().size([height - 100, width - 200]);
@@ -58,14 +62,51 @@
   }());
 
   (function(){
-    var data = [];
-    var cnt = 10;
-    var width = window.innerWidth * 0.8
-    , height = window.innerHeight * 0.8
-    , cx = width / 2
-    , cy = height / 2
+    var force = d3.layout.force()
+    .charge(-120)
+    .linkDistance(30)
+    .size([width, height])
+    ;
+
+    var svg = d3.select('#force').append('svg').attr('width', width).attr('height', height);
+    var nodes = miserables.nodes
+    , links = miserables.links
+    ;
+    force
+      .nodes(nodes)
+      .links(links)
+      .start();
+
+    var link = svg.selectAll('line.link').data(links).enter()
+      .append('line').attr('class', 'link')
+      .style('stroke-width', function(d){console.log(Math.sqrt(d.value)); return Math.sqrt(d.value); })
+      .style('stroke', function(d){ return '#CCC';})
+      .style('stroke-opacity', '0.6')
     ;
     
+    var node = svg.selectAll('circle.node').data(nodes).enter()
+      .append('circle').attr('class', 'node')
+      .attr('r', 5)
+      .style('fill', function(d){return color(d.group); })
+      .call(force.drag)
+    ;
+
+    force.on('tick', function(){
+      link.attr('x1', function(d){return d.source.x ;})
+        .attr('y1', function(d){return d.source.y ;})
+        .attr('x2', function(d){return d.target.x ;})
+        .attr('y2', function(d){return d.target.y ;})
+      ;
+      node.attr('cx', function(d){ return d.x})
+        .attr('cy', function(d){ return d.y})
+      ;
+    });
+    
+  }());
+
+  (function(){
+    var data = [];
+    var cnt = 10;
     var svg = d3.select('#smile')
       .append('svg')
       .attr('xmlns','http://www.w3.org/2000/svg')
@@ -78,7 +119,6 @@
       svg.data(data).enter();
       
       var smile = svg.append('g').attr('class', 'smile')
-        .attr('r', function(d){console.log(d);})
         .attr('transform', 'translate('+(width / 2)+','+(height / 2)+ ') rotate('+0+') scale(0.2)');
       smile.append('circle').attr('class', 'face')
         .attr('r', function(d){ return d.size;})
