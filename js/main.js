@@ -111,6 +111,8 @@
       .append('svg')
       .attr('xmlns','http://www.w3.org/2000/svg')
       .attr('version','1.1')
+      .attr('width', width)
+      .attr('height', height * 0.8)
     ;
 
     var duration = 500;
