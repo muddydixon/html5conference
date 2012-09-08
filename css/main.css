@@ -33,3 +33,61 @@ div.cell {
 div.hover {
     border: 5px solid #FC7676;
 }
+
+div.speak {
+    float: left;
+    margin-left: 160px;
+    border-left: 60px solid white;
+    border-bottom: 40px solid transparent;
+}
+div.speak p {
+    font-size: 80pt;
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-left: -160px;
+    background: white;
+    border-radius: 10px;
+    color: #333;
+}
+div.speaker {
+    margin: 0px;
+    margin-left: 60px;
+    margin-top: 190px;
+    width: 220px;
+    height: 220px;
+    padding: 0px;
+    border-radius: 80px;
+    border: 10px solid #FFF;
+    box-shadow: 2px 2px 2px #666;
+}
+div.speaker img {
+    margin: 0;
+    padding: 0;
+    border-radius: 70px;
+    -webkit-background-clip: padding-box;
+}
+
+div.border {
+    display: inline-block;
+}
+div.border img {
+    padding: 10px;
+    background: white;
+    border-radius: 10%;
+    -webkit-background-clip: padding-box;
+}
+img.clip {
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    -webkit-background-clip: padding-box;
+}
+div.dismiss {
+    margin-top: -440px;
+    margin-left: 850px;
+    color: red;
+    opacity: 0.6;
+    font-size: 200pt;
+    -webkit-transform: scale(8, 3);
+}

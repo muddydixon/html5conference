@@ -68,7 +68,7 @@
     .size([width, height])
     ;
 
-    var svg = d3.select('#force').append('svg').attr('width', width).attr('height', height);
+    var svg = d3.select('#force').append('svg').attr('width', width).attr('height', height * 0.8);
     var nodes = miserables.nodes
     , links = miserables.links
     ;
@@ -79,7 +79,7 @@
 
     var link = svg.selectAll('line.link').data(links).enter()
       .append('line').attr('class', 'link')
-      .style('stroke-width', function(d){console.log(Math.sqrt(d.value)); return Math.sqrt(d.value); })
+      .style('stroke-width', function(d){ return Math.sqrt(d.value); })
       .style('stroke', function(d){ return '#CCC';})
       .style('stroke-opacity', '0.6')
     ;
